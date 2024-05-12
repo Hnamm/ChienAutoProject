@@ -3,7 +3,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>
+                    <a class="nav-link trangchu active" aria-current="page" href="#">Trang Chủ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Tin Tức</a>
@@ -12,9 +12,21 @@
                     <a href="#" class="nav-link">Ưu Đãi</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Giỏ Hàng</a>
+                    <a href="#" class="nav-link">Ưa Thích</a>
                 </li>
-                
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Danh Mục</a>
+                    <div class="nav-danhmuc nav-menu">
+                        <ul>
+                            <li>
+                                <a routerLink="/productCategory/1" routerLinkActive="active-link">Ô tô điện</a>
+                            </li>
+                            <li>    
+                                <a routerLink="/productCategory/2" routerLinkActive="active-link">Xe máy điện</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
@@ -26,9 +38,8 @@
 
 <div class="search-box">
     <input type="text" class="form-control search-input" placeholder="Tìm sản phẩm">
-    <select class="form-control car-catergory">
-        <option selected disabled>Danh mục sản phẩm</option>
-        <option>Ô tô điện</option>
-        <option>Xe máy điện</option>
-    </select>
+    <button class="search-icon">
+         <i class="fa-brands fa-searchengin"></i>
+    </button>
+    
 </div>
