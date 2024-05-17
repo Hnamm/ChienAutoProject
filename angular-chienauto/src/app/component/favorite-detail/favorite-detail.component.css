@@ -13,11 +13,11 @@
     color: white;
     
 }
-.car-image{
-    width: 100%;
+/* .car-image{
+    width: 30%;
     height: auto;
     margin-bottom: 10px;
-}
+} */
 
 .car-price{
     margin-bottom: 10px;
@@ -35,4 +35,32 @@
     margin: 0px 5px;
 }
 
+.product-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.car-image {
+    flex: 1; 
+    max-width: 33%; 
+    box-sizing: border-box; 
+}
+.car-image img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.car-details {
+    flex: 2; 
+    max-width: 66%; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column; 
+    
+}
+
+.car-actions {
+    margin-top: 10px; 
+}
 

@@ -9,11 +9,18 @@ import { HomeComponent } from './component/home/home.component';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
-import path from 'path';
+import { SearchComponent } from './component/search/search.component';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { ProductCategoryMenuComponent } from './component/product-category-menu/product-category-menu.component';
+import { FavoriteDetailComponent } from './component/favorite-detail/favorite-detail.component';
+
 
 
 
 const routes: Routes = [
+    {path: 'favorite-details', component: FavoriteDetailComponent},
+    {path: 'products/:id', component: ProductDetailComponent},
+    {path: 'search/:keyword', component: ProductListComponent},
     {path: 'productCategory/:id', component: ProductListComponent},
     {path: 'productCategory/', component: ProductListComponent},
     {path: 'products', component: ProductListComponent},
@@ -30,12 +37,18 @@ const routes: Routes = [
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    SearchComponent,
+    ProductDetailComponent,
+    ProductCategoryMenuComponent,
+    FavoriteDetailComponent,
+    
 
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+   
 
   ],
   providers: [
