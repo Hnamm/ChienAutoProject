@@ -12,6 +12,7 @@ import { FavoriteService } from '../../services/favorite.service';
 })
 export class ProductListComponent implements OnInit{
 
+
   products: Product[] = [];
   currentCategoryId: number = -1;
   searchMode: boolean = false;
@@ -63,5 +64,6 @@ export class ProductListComponent implements OnInit{
     const favoriteItem = new FavoriteItem(product);
     this.favoriteService.addToFavoriteListService(favoriteItem);
   }
-  
+
+
 }

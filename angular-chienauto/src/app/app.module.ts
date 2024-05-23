@@ -13,11 +13,15 @@ import { SearchComponent } from './component/search/search.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { ProductCategoryMenuComponent } from './component/product-category-menu/product-category-menu.component';
 import { FavoriteDetailComponent } from './component/favorite-detail/favorite-detail.component';
-
+import { LoanEstimateProductComponent } from './component/loan-estimate-product/loan-estimate-product.component';
+import { FormsModule } from '@angular/forms';
+import { LoanMoneyTableComponent } from './component/loan-money-table/loan-money-table.component';
 
 
 
 const routes: Routes = [
+    {path: 'loanEstimate/:id/table', component: LoanMoneyTableComponent},
+    {path: 'loanEstimate/:id', component: LoanEstimateProductComponent},
     {path: 'favorite-details', component: FavoriteDetailComponent},
     {path: 'products/:id', component: ProductDetailComponent},
     {path: 'search/:keyword', component: ProductListComponent},
@@ -41,6 +45,8 @@ const routes: Routes = [
     ProductDetailComponent,
     ProductCategoryMenuComponent,
     FavoriteDetailComponent,
+    LoanEstimateProductComponent,
+    LoanMoneyTableComponent,
     
 
   ],
@@ -48,8 +54,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     BrowserModule,
     HttpClientModule,
-   
-
+    FormsModule
   ],
   providers: [
     provideClientHydration(),

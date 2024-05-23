@@ -31,6 +31,7 @@ export class FavoriteService {
     if (index !== -1) {
         this.favoriteItems.splice(index, 1); 
         this.favoriteItemsSubject.next(this.favoriteItems);
+        
     }
 }
 

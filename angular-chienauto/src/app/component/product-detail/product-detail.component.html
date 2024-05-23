@@ -25,7 +25,7 @@
             <div class="car-actions">
                 <button (click)="addToFavorite(product)" class="btn btn-primary">Thêm vào mục ưa thích</button>
                 <span class="space-x"></span>
-                <a href="#" class="btn btn-primary">Dự tính khoản vay</a>
+                <button [routerLink]="['/loanEstimate', product.id]"  class="btn btn-primary">Dự tính khoản vay</button>
             </div>
         </div>
 
