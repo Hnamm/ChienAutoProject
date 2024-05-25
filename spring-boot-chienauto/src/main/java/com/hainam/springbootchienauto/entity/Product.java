@@ -33,6 +33,12 @@ public class Product {
     private boolean active;
     @Column(name = "units_in_stock")
     private int unitsInStock;
+    @Column(name = "max_speed")
+    private int maxSpeed;
+    @Column(name = "road_one_time")
+    private int roadOneTime;
+    @Column(name = "battery_time")  
+    private int batteryTime;
     @Column(name = "date_created")
     @CreationTimestamp
     private Date dateCreated;
