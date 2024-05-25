@@ -8,6 +8,9 @@ export class Product {
                 public imageUrl: string,
                 public active: boolean,
                 public unitsInStock: number,
+                public maxSpeed: number,
+                public roadOneTime: number,
+                public batteryTime: number,
                 public dateCreated: Date,
                 public lastUpdated: Date,
     ){

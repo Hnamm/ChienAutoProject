@@ -18,17 +18,17 @@
             <label for="loan-duration">Thời gian vay:</label>
             <div class="select-container" >
                 <select id="loan-duration" [(ngModel)] = "loanDuration" (change)="updateLoanDuration(loanDuration)">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
                     <option value="12">12</option>
                     <option value="24">24</option>
-                    <option value="36">36</option>
-                    <option value="48">48</option>
                 </select>
                 <span>tháng</span>
             </div>
             
             <label for="down-payment">Phần trăm trả trước:</label>
             <div class="down-payment-container">
-                <select id="down-payment" [(ngModel)]="downPayment">
+                <select id="down-payment" [(ngModel)]="downPayment" (change)="updateDownPayment(downPayment)">
                     <option value="25">25</option>
                     <option value="50">50</option>
                     <option value="75">75</option>
@@ -38,16 +38,16 @@
             </div>
             <label for="interest-rate">Lãi suất:</label>
             <div class="interest-rate-container">
-                <select id="interest-rate" [(ngModel)]="interestRate">
-                    <option value="25">5</option>
-                    <option value="50">10</option>
-                    <option value="75">15</option>
+                <select id="interest-rate" [(ngModel)]="interestRate" (change)="updateInterestRate(interestRate)">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
                 </select>
                 <span>%</span>
                 <!-- <input type="number" id="interest-rate" [(ngModel)]="interestRate" min="0" max="100" step="0.1" > % -->
             </div> 
             <div class="car-actions">
-                <button class="btn btn-primary" [routerLink]="['/loanEstimate', product.id, 'table']">
+                <button class="btn btn-primary" [routerLink]="['/loanEstimate', product.id, 'table']" (click)="onCalculateLoan()">
                     <span>Tải lịch vay chi tiết</span><br>
                 </button>
                 

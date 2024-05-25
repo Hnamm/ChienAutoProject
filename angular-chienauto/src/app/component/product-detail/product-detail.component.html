@@ -12,8 +12,11 @@
         </div>
         <div class="car-details">
             <h1 class="car-name"><p>Tên xe: {{ product.name }}</p></h1>
-            <p class="car-price">Giá: {{ product.unitPrice | currency: 'USD' }}</p>
+            <p class="car-price">Giá: {{ product.unitPrice | currency: 'VND' }}</p>
             <p>Mô tả: {{ product.description }}</p>
+            <p>Tốc độ tối đa: {{ product.maxSpeed }} (km/h) (dự kiến)</p>
+            <p>Quãng đường trong 1 lần sạc: {{ product.roadOneTime }} (km)</p>
+            <p>Thời gian sạc đầy pin: {{ product.batteryTime }} (phút) (dự kiến)</p>
             <div class="car-rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
